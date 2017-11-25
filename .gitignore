@@ -1,0 +1,5 @@
+# idea files
+.idea/
+
+# venv_files
+updog_env/
