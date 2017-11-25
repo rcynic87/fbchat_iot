@@ -8,7 +8,7 @@ from fbchat.models import *
 
 USERNAME = os.getenv('BOT_USER')
 PASS = os.getenv('BOT_PASS')
-GROUP_ID = '1484230981612644'
+GROUP_ID = os.getenv('GROUP_ID')
 YO_MOMMA_URL = "http://api.yomomma.info"
 CHUCK_NORRIS_URL = "http://api.icndb.com/jokes/random"
 
