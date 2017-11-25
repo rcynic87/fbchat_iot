@@ -1,0 +1,4 @@
+[submodule "lambda-lxml-base"]
+	path = lambda-lxml-base
+	url = https://github.com/cjpetrus/lambda-lxml-base.git
+	branch = master
