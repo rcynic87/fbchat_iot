@@ -6,3 +6,6 @@ updog_env/
 
 # pyc files
 *.pyc
+
+# DS Store
+.DS_Store

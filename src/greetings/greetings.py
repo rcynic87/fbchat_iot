@@ -3,6 +3,7 @@ import pytz
 import boto3
 import fbchat
 import random
+import pickle
 import botocore
 from datetime import datetime
 from fbchat.models import *
@@ -24,20 +25,21 @@ PART_OF_DAY = {
 
 
 def get_group_members():
-    global GROUP_MEMBERS
     s3_client = boto3.client('s3')
-    response = s3_client.get_object(Bucket=os.getenv('S3_BUCKET'), Key='group_members.py')
+    response = s3_client.get_object(Bucket=os.getenv('S3_BUCKET'), Key='group_members.pickle')
     response_obj_contents = response.get('Body').read()
-    GROUP_MEMBERS = response_obj_contents
+    return response_obj_contents
 
 
 USERNAME = os.getenv('BOT_USER')
 PASS = os.getenv('BOT_PASS')
 GROUP_ID = os.getenv('GROUP_ID')
 try:
-    get_group_members()
+    dictionary = get_group_members().strip()
+    GROUP_MEMBERS = pickle.loads(dictionary)
 except botocore.exceptions.ClientError as s3_error:
     # some access issue, nevermind for locals
+    print(s3_error)
     pass
 
 
