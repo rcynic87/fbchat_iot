@@ -3,3 +3,6 @@
 
 # venv_files
 updog_env/
+
+# pyc files
+*.pyc
