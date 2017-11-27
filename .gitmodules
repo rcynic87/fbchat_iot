@@ -2,3 +2,4 @@
 	path = lambda-lxml-base
 	url = https://github.com/cjpetrus/lambda-lxml-base.git
 	branch = master
+        ignore = dirty
