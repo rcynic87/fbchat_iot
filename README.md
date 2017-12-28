@@ -43,3 +43,14 @@ export GROUP_ID=<group_id>
 (updog_env)$ cd src/greetings
 (updog_env)$ python greetings.py
 ```
+
+## Deploying
+
+1. Create a dist folder
+2. Add the relevant code to the dist folder
+3. From the virtualenv add the contents of env/lib/site-packages/
+4. Replace lxml from `lambda-lxml-base` into dist
+5. Select the files in dist and compress those files
+6. Upload the Archive.zip to S3
+7. Copy the link and apply to the lambda method
+8. Save and Test
