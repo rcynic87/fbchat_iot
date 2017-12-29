@@ -50,7 +50,8 @@ export GROUP_ID=<group_id>
 2. Add the relevant code to the dist folder
 3. From the virtualenv add the contents of env/lib/site-packages/
 4. Replace lxml from `lambda-lxml-base` into dist
-5. Select the files in dist and compress those files
-6. Upload the Archive.zip to S3
-7. Copy the link and apply to the lambda method
-8. Save and Test
+5. Replace PIL and Pillow from `lambda-pil-lib` into dist
+6. Select the files in dist and compress those files
+7. Upload the Archive.zip to S3
+8. Copy the link and apply to the lambda method
+9. Save and Test
