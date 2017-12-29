@@ -80,7 +80,8 @@ def handler(event, context):
         image_contents = fp.read()
     image_base_encoded = base64.b64encode(image_contents)
     # Get the API to respond with HTML that can display base64
-    html_response = "<div><img src='data:image/png;base64, {}' /></div>".format(image_base_encoded)
+    html_response = "<html><body><div><img src='data:image/png;base64, {}' /></div></body></html>".format(
+        image_base_encoded)
     return html_response
 
 
